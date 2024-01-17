@@ -1,31 +1,26 @@
 @font-face {
-  font-family: "TTCrownMychewR";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/TTCrownMychewR.woff2")
+  font-family: "EF_hyunydororong";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/EF_hyunydororong.woff2")
     format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "KOTRAHOPE";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2")
-    format("woff2");
+  font-family: "UhBeeSe_hyun";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  background-color: #f6f6f6;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0px;
-  font-family: "KOTRAHOPE";
-}
-
-h1 {
-  font-family: "TTCrownMychewR";
+  font-family: "EF_hyunydororong";
 }
 
 @media (min-width: 650px) {
@@ -36,7 +31,7 @@ h1 {
 
 @media (min-width: 650px) {
   .App {
-    width: 90vw;
+    width: 70vw;
   }
 }
 
@@ -49,42 +44,41 @@ h1 {
   min-height: 100vh;
   padding-left: 20px;
   padding-right: 20px;
+  width: 70vw;
 }
 
 /* MyButton */
 .MyButton {
-  font-family: "KOTRAHOPE";
+  font-family: "EF_hyunydororong";
   cursor: pointer;
   border: none;
-  border-radius: 5px;
-
+  border-radius: 10px;
   padding: 10px 20px;
-  font-size: 18px;
-
+  font-size: 25px;
   white-space: nowrap;
 }
 
 .MyButton_default {
-  background-color: #ececec;
-  color: black;
+  color: #132043;
+  background-color: white;
 }
 
 .MyButton_positive {
-  background-color: #64c964;
-  color: white;
+  color: #59729a;
+  background-color: white;
 }
+
 .MyButton_negative {
-  background-color: #fd565f;
-  color: white;
+  color: #e0a8b3;
+  background-color: white;
 }
 
 /* Header */
 header {
   padding: 20px 0;
-
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 2px solid #f1b4bb;
 }
 
 header > div {
@@ -93,16 +87,94 @@ header > div {
 
 header .head_text {
   width: 50%;
-  font-size: 25px;
+  font-family: "EF_hyunydororong";
+  font-size: 30px;
+  color: #1f4172;
   justify-content: center;
 }
 
 header .head_btn_left {
   width: 25%;
   justify-content: start;
+  color: #1f4172;
 }
 
 header .head_btn_right {
   width: 25%;
   justify-content: end;
+  color: #1f4172;
+}
+
+/* DiaryList */
+.DiaryList .menu {
+  margin: 20px 0 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.DiaryList .menu .ControlMenu {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: "EF_hyunydororong";
+  color: #59729a;
+  font-size: 18px;
+}
+
+/* DiaryItem */
+.DiaryItem {
+  padding: 15px 0;
+  border-bottom: 1px solid #e2e2e2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.DiaryItem .emotion_img_wrapper {
+  cursor: pointer;
+  min-width: 120px;
+  height: 80px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.DiaryItem .info_wrapper {
+  flex-grow: 1;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.DiaryItem .btn_wrapper {
+  display: flex;
+  align-items: flex-end;
+}
+
+.DiaryItem .diary_date {
+  font-weight: bold;
+  color: #59729a;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.DiaryItem .diary_content {
+  font-size: 18px;
+  font-family: "UhBeeSe_hyun";
+}
+
+/* select_date */
+.SelectDate {
+  display: flex;
+}
+
+.SelectDate .select_year,
+.select_month {
+  border: none;
+  border-radius: 5px;
+  margin: 10px 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: "EF_hyunydororong";
+  font-size: 20px;
+  color: #e0a8b3;
 }
