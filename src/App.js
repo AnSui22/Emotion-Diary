@@ -14,9 +14,9 @@ const reducer = (state, action) => {
     }
 
     case "CREATE": {
-      newState = [...action.data, ...state];
+      newState = [action.data, ...state];
       break;
-    }
+    } // 배열 안에 객체 [{...}, {...}, {...}]
 
     case "REMOVE": {
       newState = state.filter((it) => it.id !== action.targetId);
@@ -69,7 +69,7 @@ function App() {
   const [data, dispatch] = useReducer(reducer, dummyData);
   const dataId = useRef(0);
 
-  //CREATE
+  // CREATE - 객체
   const onCreate = (date, content, emotion) => {
     dispatch({
       type: "CREATE",
@@ -83,12 +83,12 @@ function App() {
     dataId.current += 1;
   };
 
-  //REMOVE
+  // REMOVE
   const onRemove = (targetId) => {
     dispatch({ type: "REMOVE", targetId });
   };
 
-  //EDIT
+  // EDIT
   const onEdit = (targetId, date, content, emotion) => {
     dispatch({
       type: "EDIT",

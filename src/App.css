@@ -1,3 +1,4 @@
+/* 기본 설정 */
 @font-face {
   font-family: "EF_hyunydororong";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/EF_hyunydororong.woff2")
@@ -177,4 +178,74 @@ header .head_btn_right {
   font-family: "EF_hyunydororong";
   font-size: 20px;
   color: #e0a8b3;
+}
+
+/* DiaryEditor */
+.DiaryEditor {
+}
+
+.DiaryEditor h2 {
+  color: #59729a;
+  font-size: 23px;
+}
+
+.DiaryEditor section {
+  margin-bottom: 40px;
+}
+
+.DiaryEditor .input_date {
+  border: none;
+  border-radius: 5px;
+  background-color: #f5f2f2;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: "EF_hyunydororong";
+}
+
+.DiaryEditor .emotion_list_wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+}
+
+.DiaryEditor textarea {
+  font-family: "UhBeeSe_hyun";
+  font-size: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 200px;
+  resize: vertical;
+
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.DiaryEditor .control_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* EmotionItem */
+.EmotionItem {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.EmotionItem img {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.EmotionItem span {
+  font-size: 18px;
+}
+
+.Emotion_on span {
+  border-bottom: 3px solid #e0a8b3;
+  color: #e0a8b3;
+  transition: 0.1s ease-in-out;
 }
