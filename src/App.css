@@ -70,7 +70,7 @@ body {
 }
 
 .MyButton_negative {
-  color: #e0a8b3;
+  color: #102c57;
   background-color: white;
 }
 
@@ -79,7 +79,7 @@ header {
   padding: 20px 0;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid #f1b4bb;
+  border-bottom: 2px solid #102c57;
 }
 
 header > div {
@@ -134,6 +134,7 @@ header .head_btn_right {
 .DiaryItem .emotion_img_wrapper {
   cursor: pointer;
   min-width: 120px;
+  margin-top: 25px;
   height: 80px;
   border-radius: 5px;
   display: flex;
@@ -161,6 +162,14 @@ header .head_btn_right {
 .DiaryItem .diary_content {
   font-size: 18px;
   font-family: "UhBeeSe_hyun";
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.DiaryItem .diary_song {
+  display: flex;
+  margin-right: 10px;
 }
 
 /* select_date */
@@ -177,7 +186,7 @@ header .head_btn_right {
   cursor: pointer;
   font-family: "EF_hyunydororong";
   font-size: 20px;
-  color: #e0a8b3;
+  color: #102c57;
 }
 
 /* DiaryEditor */
@@ -207,7 +216,32 @@ header .head_btn_right {
   grid-template-columns: repeat(6, auto);
 }
 
-.DiaryEditor textarea {
+.DiaryEditor .title_wrapper textarea {
+  font-family: "UhBeeSe_hyun";
+  font-size: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 20px;
+  resize: vertical;
+
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.DiaryEditor .song_wrapper textarea {
+  font-family: "UhBeeSe_hyun";
+  font-size: 20px;
+  box-sizing: border-box;
+  width: 45%;
+  min-height: 20px;
+  resize: vertical;
+  margin-right: 20px;
+
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.DiaryEditor .text_wrapper textarea {
   font-family: "UhBeeSe_hyun";
   font-size: 20px;
   box-sizing: border-box;
@@ -236,7 +270,7 @@ header .head_btn_right {
 }
 
 .EmotionItem img {
-  width: 50%;
+  width: 60px;
   margin-bottom: 10px;
 }
 
@@ -245,7 +279,34 @@ header .head_btn_right {
 }
 
 .Emotion_on span {
-  border-bottom: 3px solid #e0a8b3;
-  color: #e0a8b3;
+  border-bottom: 3px solid #102c57;
+  color: #102c57;
   transition: 0.1s ease-in-out;
+}
+
+/* Diary */
+
+.DiaryPage {
+}
+
+.DiaryPage p {
+  color: #59729a;
+  font-size: 23px;
+}
+
+.DiaryPage .diary_date_wrapper p {
+  font-family: "EF_hyunydororong";
+  font-size: 20px;
+  color: #59729a;
+  margin-top: 30px;
+}
+
+.DiaryPage .diary_title_wrapper p {
+  font-family: "UhBeeSe_hyun";
+  font-size: 25px;
+  color: black;
+}
+
+.DiaryPage .diary_img_wrapper img {
+  width: 40px;
 }
