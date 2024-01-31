@@ -42,26 +42,38 @@ const dummyData = [
   {
     id: 1,
     emotion: 1,
-    content: "오늘의 일기 1번",
+    title: "오늘의 일기 1번",
+    content: "오늘의 일기 1번입니다 만나서 반가워요",
     date: 1705503032067,
+    artist: "에스파",
+    music: "thirsty",
   },
   {
     id: 2,
     emotion: 2,
-    content: "오늘의 일기 2번",
+    title: "오늘의 일기 2번",
+    content: "오늘의 일기 2번입니다 만나서 반가워요",
     date: 1705503032068,
+    artist: "에스파",
+    music: "thirsty",
   },
   {
     id: 3,
     emotion: 3,
-    content: "오늘의 일기 3번",
+    title: "오늘의 일기 3번",
+    content: "오늘의 일기 3번입니다 만나서 반가워요",
     date: 1705503032069,
+    artist: "에스파",
+    music: "thirsty",
   },
   {
     id: 4,
     emotion: 4,
-    content: "오늘의 일기 4번",
+    title: "오늘의 일기 4번",
+    content: "오늘의 일기 4번입니다 만나서 반가워요",
     date: 1705503032070,
+    artist: "에스파",
+    music: "thirsty",
   },
 ];
 
@@ -70,14 +82,17 @@ function App() {
   const dataId = useRef(0);
 
   // CREATE - 객체
-  const onCreate = (date, content, emotion) => {
+  const onCreate = (date, title, content, emotion, artist, music) => {
     dispatch({
       type: "CREATE",
       data: {
         id: dataId.current,
         date: new Date(date).getTime(),
+        title,
         content,
         emotion,
+        artist,
+        music,
       },
     });
     dataId.current += 1;
@@ -89,14 +104,17 @@ function App() {
   };
 
   // EDIT
-  const onEdit = (targetId, date, content, emotion) => {
+  const onEdit = (targetId, date, title, content, emotion, artist, music) => {
     dispatch({
       type: "EDIT",
       data: {
         id: targetId,
         date: new Date(date).getTime(),
+        title,
         content,
         emotion,
+        artist,
+        music,
       },
     });
   };
@@ -109,7 +127,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/new" element={<New />} />
-              <Route path="/edit" element={<Edit />} />
+              <Route path="/edit/:id" element={<Edit />} />
               <Route path="/diary/:id" element={<Diary />} />
             </Routes>
           </div>

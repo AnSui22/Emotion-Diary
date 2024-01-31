@@ -1,74 +1,77 @@
 import { useNavigate } from "react-router-dom";
-import { useRef, useState, useContext } from "react";
+import { useRef, useState, useContext, useEffect } from "react";
 import { DiaryDispatchContext } from "../App.js";
 
 import MyHeader from "./MyHeader";
 import MyButton from "./MyButton";
 import EmotionItem from "./EmotionItem";
+import { getStringDate } from "../util/date.js";
+import { emotionList } from "../util/emotionList.js";
 
-const emotionList = [
-  {
-    emotion_id: 1,
-    emotion_img: process.env.PUBLIC_URL + `/assets/emotion1.png`,
-    emotion_descript: "happy",
-  },
-  {
-    emotion_id: 2,
-    emotion_img: process.env.PUBLIC_URL + `/assets/emotion2.png`,
-    emotion_descript: "average",
-  },
-  {
-    emotion_id: 3,
-    emotion_img: process.env.PUBLIC_URL + `/assets/emotion3.png`,
-    emotion_descript: "sad",
-  },
-  {
-    emotion_id: 4,
-    emotion_img: process.env.PUBLIC_URL + `/assets/emotion4.png`,
-    emotion_descript: "tired",
-  },
-  {
-    emotion_id: 5,
-    emotion_img: process.env.PUBLIC_URL + `/assets/emotion5.png`,
-    emotion_descript: "annoyed",
-  },
-  {
-    emotion_id: 6,
-    emotion_img: process.env.PUBLIC_URL + `/assets/emotion6.png`,
-    emotion_descript: "nervous",
-  },
-];
-
-const getStringDate = (date) => {
-  return date.toISOString().slice(0, 10);
-};
-
-const DiaryEditor = () => {
+const DiaryEditor = ({ isEdit, originData }) => {
   const [date, setDate] = useState(getStringDate(new Date()));
   const [emotion, setEmotion] = useState(3);
+
+  const titleRef = useRef();
+  const [title, setTitle] = useState("");
+
   const contentRef = useRef();
   const [content, setContent] = useState("");
+
+  const artistRef = useRef();
+  const [artist, setArtist] = useState("");
+
+  const musicRef = useRef();
+  const [music, setMusic] = useState("");
 
   const navigate = useNavigate();
   const handleClickEmote = (emotion) => {
     setEmotion(emotion);
   };
 
-  const { onCreate } = useContext(DiaryDispatchContext);
+  const { onCreate, onEdit } = useContext(DiaryDispatchContext);
 
   const handleSubmit = () => {
+    const title = titleRef.current.value;
+    const artist = artistRef.current.value;
+    const music = musicRef.current.value;
+
     if (content.length < 1) {
       contentRef.current.focus();
       return;
     }
-    onCreate(date, content, emotion);
+    if (
+      window.confirm(
+        isEdit
+          ? "Do you want to modify your diary?"
+          : "Do you want to save your diary?"
+      )
+    ) {
+      if (!isEdit) {
+        onCreate(date, title, content, emotion, artist, music);
+      } else {
+        onEdit(originData.id, date, title, content, emotion, artist, music);
+      }
+    }
+
     navigate("/", { replace: true });
   };
+
+  useEffect(() => {
+    if (isEdit) {
+      setDate(getStringDate(new Date(parseInt(originData.date))));
+      setTitle(originData.title);
+      setContent(originData.content);
+      setEmotion(originData.emotion);
+      setArtist(originData.artist);
+      setMusic(originData.music);
+    }
+  }, [isEdit, originData]);
 
   return (
     <div className="DiaryEditor">
       <MyHeader
-        headText={"NEW DIARY"}
+        headText={isEdit ? "EDIT DIARY" : "NEW DIARY"}
         leftChild={<MyButton text={"<"} onClick={() => navigate(-1)} />}
       />
       <div>
@@ -85,7 +88,19 @@ const DiaryEditor = () => {
         </section>
 
         <section>
-          <h2>Emotion</h2>
+          <h2>Title</h2>
+          <div className="input_box title_wrapper">
+            <textarea
+              placeholder="제목을 작성해주세요."
+              ref={titleRef}
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          </div>
+        </section>
+
+        <section>
+          <h2>Mood</h2>
           <div className="input_box emotion_list_wrapper">
             {emotionList.map((it) => (
               <EmotionItem
@@ -99,7 +114,25 @@ const DiaryEditor = () => {
         </section>
 
         <section>
-          <h2>Today's diary</h2>
+          <h2>Today's Playlist</h2>
+          <div className="input_box song_wrapper">
+            <textarea
+              placeholder="Artist"
+              ref={artistRef}
+              value={artist}
+              onChange={(e) => setArtist(e.target.value)}
+            />
+            <textarea
+              placeholder="Music"
+              ref={musicRef}
+              value={music}
+              onChange={(e) => setMusic(e.target.value)}
+            />
+          </div>
+        </section>
+
+        <section>
+          <h2>Today's Diary</h2>
           <div className="input_box text_wrapper">
             <textarea
               placeholder="일기를 작성해주세요."
