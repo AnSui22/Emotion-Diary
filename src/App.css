@@ -26,13 +26,7 @@ body {
 
 @media (min-width: 650px) {
   .App {
-    width: 640px;
-  }
-}
-
-@media (min-width: 650px) {
-  .App {
-    width: 70vw;
+    width: 65vw;
   }
 }
 
@@ -45,7 +39,7 @@ body {
   min-height: 100vh;
   padding-left: 20px;
   padding-right: 20px;
-  width: 70vw;
+  width: 65vw;
 }
 
 /* MyButton */
@@ -104,6 +98,64 @@ header .head_btn_right {
   width: 25%;
   justify-content: end;
   color: #1f4172;
+}
+
+/* Calender */
+/* Add this CSS to your existing stylesheet or create a new one */
+
+.calender {
+  margin-top: 20px;
+}
+
+.week_row {
+  display: flex;
+}
+
+.day_row {
+  display: flex;
+}
+
+.col {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+}
+
+.cell {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 120px;
+}
+
+.cell span {
+  display: flex;
+}
+
+.valid {
+  background-color: #fff;
+}
+
+.not-valid {
+  background-color: #f0f0f0;
+  color: #ccc;
+}
+
+.disabled {
+  background-color: #f0f0f0;
+  color: #ccc;
+  pointer-events: none;
+}
+
+.selected {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.select_year,
+.select_month {
+  margin-right: 10px;
+  padding: 5px;
+  font-size: 14px;
 }
 
 /* DiaryList */
