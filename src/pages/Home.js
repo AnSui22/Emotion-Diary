@@ -4,6 +4,7 @@ import { format } from "date-fns";
 import { startOfMonth, endOfMonth, startOfWeek, endOfWeek } from "date-fns";
 import { isSameMonth, isSameDay, addDays } from "date-fns";
 import { useNavigate } from "react-router-dom";
+import { monthlist, yearlist } from "../util/date";
 
 import MyHeader from "../components/MyHeader";
 import MyButton from "../components/MyButton";
@@ -27,14 +28,6 @@ const Home = () => {
 
   const currentYear = curDate.getFullYear();
   const currentMonth = format(curDate, "MM");
-  const yearlist = Array.from(
-    { length: 5 },
-    (_, i) => new Date().getFullYear() - 2 + i
-  );
-  const monthlist = Array.from({ length: 12 }, (_, i) =>
-    (i + 1).toString().padStart(2, "0")
-  );
-
   const headText = `${currentYear} ${currentMonth}`;
 
   const increaseMonth = () => {
@@ -68,7 +61,6 @@ const Home = () => {
   let days = [];
   let day = startDate;
   let formattedDate = "";
-  const diaryTitlesByDate = "";
 
   while (day <= endDate) {
     for (let i = 0; i < 7; i++) {
@@ -156,7 +148,7 @@ const Home = () => {
           <MyButton
             text={"일기 모아보기"}
             type={"positive"}
-            onClick={() => navigate("/new")}
+            onClick={() => navigate("/diarylist")}
           />
 
           <MyButton

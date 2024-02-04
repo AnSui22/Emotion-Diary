@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import New from "./pages/New";
 import Diary from "./pages/Diary";
 import Edit from "./pages/Edit";
+import MonthlyDiaryList from "./pages/MonthlyDiaryList";
 
 const reducer = (state, action) => {
   let newState = [];
@@ -103,6 +104,7 @@ function App() {
               <Route path="/new" element={<New />} />
               <Route path="/edit/:id" element={<Edit />} />
               <Route path="/diary/:id" element={<Diary />} />
+              <Route path="/diarylist" element={<MonthlyDiaryList />} />
             </Routes>
           </div>
         </BrowserRouter>
