@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeadphones } from "@fortawesome/free-solid-svg-icons";
 
-const DiaryItem = ({ id, title, emotion, content, date, artist, music }) => {
+const DiaryItem = ({ id, title, emotion, date, artist, music }) => {
   const strDate = new Date(parseInt(date)).toLocaleDateString();
   const navigate = useNavigate();
   const goDetail = () => {
