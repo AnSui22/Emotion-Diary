@@ -146,13 +146,13 @@ const Home = () => {
         </div>
         <div>
           <MyButton
-            text={"일기 모아보기"}
+            text={"Diary List"}
             type={"positive"}
             onClick={() => navigate("/diarylist")}
           />
 
           <MyButton
-            text={"NEW"}
+            text={"New"}
             type={"positive"}
             onClick={() => navigate("/new")}
           />

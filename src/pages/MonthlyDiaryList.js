@@ -6,6 +6,7 @@ import { monthlist, yearlist } from "../util/date";
 import MyHeader from "../components/MyHeader";
 import MyButton from "../components/MyButton";
 import DiaryList from "../components/DiaryList";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const diaryList = useContext(DiaryStateContext);
@@ -17,6 +18,7 @@ const Home = () => {
   const currentMonth = format(curDate, "MM");
 
   const headText = `${currentYear} ${currentMonth}`;
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (diaryList.length >= 1) {
@@ -84,6 +86,23 @@ const Home = () => {
               </option>
             ))}
           </select>
+
+          <button className="today_btn" onClick={() => setCurDate(new Date())}>
+            Today
+          </button>
+        </div>
+        <div>
+          <MyButton
+            text={"Home"}
+            type={"positive"}
+            onClick={() => navigate("/")}
+          />
+
+          <MyButton
+            text={"New"}
+            type={"positive"}
+            onClick={() => navigate("/new")}
+          />
         </div>
       </div>
     );

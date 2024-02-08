@@ -34,22 +34,16 @@ const Diary = () => {
     return (
       <div className="DiaryPage">
         <MyHeader
-          headText={"HOME"}
+          headText={getStringDate(new Date(data.date))}
           leftChild={<MyButton text={"<"} onClick={() => navigate(-1)} />}
           rightChild={
             <MyButton
-              text={"EDIT"}
+              text={"Edit"}
               onClick={() => navigate(`/edit/${data.id}`)}
             />
           }
         />
         <article>
-          <section>
-            <div className="diary_date_wrapper">
-              <p>{getStringDate(new Date(data.date))}</p>
-            </div>
-          </section>
-
           <section>
             <div className="diary_title_wrapper">
               <p>{data.title}</p>
@@ -57,7 +51,7 @@ const Diary = () => {
           </section>
 
           <section>
-            <p>Mood</p>
+            <h2>Mood</h2>
             <div className="diary_img_wrapper">
               <img src={curEmotionData.emotion_img} />
               <div className="emotion_descript">

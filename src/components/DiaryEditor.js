@@ -78,12 +78,12 @@ const DiaryEditor = ({ isEdit, originData }) => {
   return (
     <div className="DiaryEditor">
       <MyHeader
-        headText={isEdit ? "EDIT DIARY" : "NEW DIARY"}
+        headText={isEdit ? "Edit Diary" : "New Diary"}
         leftChild={<MyButton text={"<"} onClick={() => navigate(-1)} />}
         rightChild={
           isEdit && (
             <MyButton
-              text={"DELETE"}
+              text={"Delete"}
               type={"negative"}
               onClick={handleRemove}
             />

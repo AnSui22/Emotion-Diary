@@ -20,7 +20,7 @@ const DiaryItem = ({ id, title, emotion, date, artist, music }) => {
         <div className="diary_date">{strDate}</div>
         <div className="diary_content">{title.slice(0, 25)}</div>
         <div className="diary_content">
-          <div className="diary_song">
+          <div className="diary_song_icon">
             <FontAwesomeIcon icon={faHeadphones} />{" "}
           </div>
           <div className="diary_song">
@@ -31,7 +31,7 @@ const DiaryItem = ({ id, title, emotion, date, artist, music }) => {
 
       <div className="btn_wrapper">
         <MyButton
-          text={"EDIT"}
+          text={"Edit"}
           type={"negative"}
           onClick={() => navigate(`/edit/${id}`)}
         />

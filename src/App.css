@@ -1,15 +1,25 @@
-/* 기본 설정 */
+/* 두꺼운 제목 */
 @font-face {
-  font-family: "EF_hyunydororong";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/EF_hyunydororong.woff2")
+  font-family: "TTCrownMychewR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/TTCrownMychewR.woff2")
     format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
+/* 달력 날짜 */
 @font-face {
-  font-family: "UhBeeSe_hyun";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff")
+  font-family: "SDSamliphopangche_Basic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Basic.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 일기 내용 */
+@font-face {
+  font-family: "Middleschool_student";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_08@1.0/Middleschool_student.woff")
     format("woff");
   font-weight: normal;
   font-style: normal;
@@ -20,8 +30,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin: 0px;
-  font-family: "EF_hyunydororong";
+  font-family: "TTCrownMychewR";
+  background-color: #fff6f6;
 }
 
 @media (min-width: 650px) {
@@ -31,7 +41,7 @@ body {
 }
 
 #root {
-  background-color: white;
+  background-color: #fff6f6;
   box-shadow: rgba(100, 100, 111, 0.2), 0px 7px 29px 0px;
 }
 
@@ -40,32 +50,33 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   width: 65vw;
+  background-color: #fff6f6;
 }
 
 /* MyButton */
 .MyButton {
-  font-family: "EF_hyunydororong";
+  font-family: "TTCrownMychewR";
   cursor: pointer;
   border: none;
   border-radius: 10px;
   padding: 10px 20px;
-  font-size: 25px;
+  font-size: 30px;
   white-space: nowrap;
 }
 
 .MyButton_default {
-  color: #132043;
-  background-color: white;
+  color: #c88ea7;
+  background-color: #fff6f6;
 }
 
 .MyButton_positive {
-  color: #59729a;
-  background-color: white;
+  color: #99627a;
+  background-color: #fff6f6;
 }
 
 .MyButton_negative {
-  color: #102c57;
-  background-color: white;
+  color: #d5b4b4;
+  background-color: #fff6f6;
 }
 
 /* Header */
@@ -73,7 +84,7 @@ header {
   padding: 20px 0;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid #102c57;
+  border-bottom: 2px solid #99627a;
 }
 
 header > div {
@@ -82,22 +93,22 @@ header > div {
 
 header .head_text {
   width: 50%;
-  font-family: "EF_hyunydororong";
-  font-size: 30px;
-  color: #1f4172;
+  font-family: "TTCrownMychewR";
+  font-size: 40px;
+  color: #99627a;
   justify-content: center;
 }
 
 header .head_btn_left {
   width: 25%;
   justify-content: start;
-  color: #1f4172;
+  color: #c88ea7;
 }
 
 header .head_btn_right {
   width: 25%;
   justify-content: end;
-  color: #1f4172;
+  color: #c88ea7;
 }
 
 /* Calender */
@@ -105,14 +116,25 @@ header .head_btn_right {
 
 .calender {
   margin-top: 20px;
+  font-size: 17px;
+  font-family: "SDSamliphopangche_Basic";
 }
 
 .week_row {
   display: flex;
 }
 
+.week_row div:first-child {
+  color: #dc8686;
+}
+
+.week_row div:last-child {
+  color: #637a9f;
+}
+
 .day_row {
   display: flex;
+  height: 160px;
 }
 
 .col {
@@ -123,12 +145,13 @@ header .head_btn_right {
 
 .cell {
   position: relative;
-  margin-bottom: 120px;
 }
 
 .diary_titles {
   cursor: pointer;
   margin-top: 10px;
+  font-family: "Middleschool_student";
+  font-size: 25px;
 }
 
 .cell span {
@@ -136,23 +159,23 @@ header .head_btn_right {
 }
 
 .valid {
-  background-color: #fff;
+  background-color: #fff6f6;
 }
 
 .disabled {
-  color: #ccc;
+  color: #e3d7d7;
 }
 
 .today {
-  color: #59729a;
+  color: #c88ea7;
 }
 
 .today_btn {
   border: none;
-  background-color: white;
-  font-family: "EF_hyunydororong";
-  font-size: 20px;
-  color: #59729a;
+  background-color: #fff6f6;
+  font-family: "TTCrownMychewR";
+  font-size: 30px;
+  color: #99627a;
   cursor: pointer;
   margin: 0 10px;
 }
@@ -169,15 +192,16 @@ header .head_btn_right {
   border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;
-  font-family: "EF_hyunydororong";
-  color: #59729a;
-  font-size: 18px;
+  font-family: "TTCrownMychewR";
+  color: #c88ea7;
+  background-color: #fff6f6;
+  font-size: 25px;
 }
 
 /* DiaryItem */
 .DiaryItem {
   padding: 15px 0;
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 1px solid #c88ea7;
   display: flex;
   justify-content: space-between;
 }
@@ -195,6 +219,7 @@ header .head_btn_right {
 .DiaryItem .info_wrapper {
   flex-grow: 1;
   margin-left: 20px;
+  font-family: "Middleschool_student";
 }
 
 .DiaryItem .btn_wrapper {
@@ -203,24 +228,27 @@ header .head_btn_right {
 }
 
 .DiaryItem .diary_date {
-  font-weight: bold;
-  color: #59729a;
-  font-size: 18px;
+  font-family: "TTCrownMychewR";
+  color: #c88ea7;
+  font-size: 25px;
   margin: 10px 0;
 }
 
 .DiaryItem .diary_content {
-  font-size: 18px;
-  font-family: "UhBeeSe_hyun";
+  font-size: 30px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   margin-bottom: 5px;
   cursor: pointer;
 }
 
-.DiaryItem .diary_song {
-  display: flex;
+.DiaryItem .diary_song_icon {
   margin-right: 10px;
+  font-size: 18px;
+}
+
+.DiaryItem .diary_song {
+  font-size: 23px;
 }
 
 /* HandleDate */
@@ -238,11 +266,12 @@ header .head_btn_right {
   border: none;
   border-radius: 5px;
   margin: 10px 3px;
-  padding: 5px 10px;
+  padding: 8px 10px;
   cursor: pointer;
-  font-family: "EF_hyunydororong";
-  font-size: 20px;
-  color: #102c57;
+  font-family: "TTCrownMychewR";
+  font-size: 30px;
+  color: #c88ea7;
+  background-color: #fff6f6;
 }
 
 /* DiaryEditor */
@@ -250,8 +279,9 @@ header .head_btn_right {
 }
 
 .DiaryEditor h2 {
-  color: #59729a;
-  font-size: 23px;
+  color: #c88ea7;
+  font-size: 35px;
+  font-weight: normal;
 }
 
 .DiaryEditor section {
@@ -261,10 +291,11 @@ header .head_btn_right {
 .DiaryEditor .input_date {
   border: none;
   border-radius: 5px;
-  background-color: #f5f2f2;
-  padding: 10px 20px;
+  background-color: #fff6f6;
+  padding: 0 15px;
   cursor: pointer;
-  font-family: "EF_hyunydororong";
+  font-family: "SDSamliphopangche_Basic";
+  font-size: 17px;
 }
 
 .DiaryEditor .emotion_list_wrapper {
@@ -273,46 +304,44 @@ header .head_btn_right {
 }
 
 .DiaryEditor .title_wrapper textarea {
-  font-family: "UhBeeSe_hyun";
-  font-size: 20px;
+  font-family: "Middleschool_student";
+  font-size: 25px;
   box-sizing: border-box;
   width: 100%;
   min-height: 20px;
   resize: vertical;
-
   border-radius: 5px;
-  padding: 20px;
+  padding: 15px;
 }
 
 .DiaryEditor .song_wrapper textarea {
-  font-family: "UhBeeSe_hyun";
-  font-size: 20px;
+  font-family: "Middleschool_student";
+  font-size: 25px;
   box-sizing: border-box;
   width: 45%;
   min-height: 20px;
   resize: vertical;
   margin-right: 20px;
-
   border-radius: 5px;
-  padding: 20px;
+  padding: 15px;
 }
 
 .DiaryEditor .text_wrapper textarea {
-  font-family: "UhBeeSe_hyun";
-  font-size: 20px;
+  font-family: "Middleschool_student";
+  font-size: 25px;
   box-sizing: border-box;
   width: 100%;
   min-height: 200px;
   resize: vertical;
-
   border-radius: 5px;
-  padding: 20px;
+  padding: 15px;
 }
 
 .DiaryEditor .control_box {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff6f6;
 }
 /* EmotionItem */
 .EmotionItem {
@@ -335,8 +364,8 @@ header .head_btn_right {
 }
 
 .Emotion_on span {
-  border-bottom: 3px solid #102c57;
-  color: #102c57;
+  border-bottom: 3px solid #99627a;
+  color: #99627a;
   transition: 0.1s ease-in-out;
 }
 
@@ -345,20 +374,20 @@ header .head_btn_right {
 .DiaryPage {
 }
 
-.DiaryPage p {
-  color: #59729a;
+.DiaryPage h2 {
+  color: #99627a;
   font-size: 23px;
+  font-weight: normal;
 }
 
-.DiaryPage .diary_date_wrapper p {
-  font-family: "EF_hyunydororong";
-  font-size: 20px;
-  color: #59729a;
-  margin-top: 30px;
+.DiaryPage p {
+  font-family: "Middleschool_student";
+  font-size: 30px;
+  color: black;
 }
 
 .DiaryPage .diary_title_wrapper p {
-  font-family: "UhBeeSe_hyun";
+  font-family: "Middleschool_student";
   font-size: 25px;
   color: black;
 }
