@@ -108,33 +108,31 @@ const DiaryEditor = ({ isEdit, originData }) => {
         }
       />
       <div>
-        <div className="DateAndWeather">
-          <section className="DateSection">
-            <h2>Date</h2>
-            <div className="input_box">
-              <input
-                className="input_date"
-                type="date"
-                value={date}
-                onChange={(e) => setDate(e.target.value)}
-              />
-            </div>
-          </section>
+        <section>
+          <h2>Date</h2>
+          <div className="input_box">
+            <input
+              className="input_date"
+              type="date"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+            />
+          </div>
+        </section>
 
-          <section className="DateSection">
-            <h2>Weather</h2>
-            <div className="input_box emotion_list_wrapper">
-              {weatherList.map((it) => (
-                <WeatherItem
-                  key={it.weather_id}
-                  {...it}
-                  onClick={handleClickWeather}
-                  isSelected={it.weather_id === weather}
-                />
-              ))}
-            </div>
-          </section>
-        </div>
+        <section>
+          <h2>Weather</h2>
+          <div className="input_box emotion_list_wrapper">
+            {weatherList.map((it) => (
+              <WeatherItem
+                key={it.weather_id}
+                {...it}
+                onClick={handleClickWeather}
+                isSelected={it.weather_id === weather}
+              />
+            ))}
+          </div>
+        </section>
 
         <section>
           <h2>Title</h2>
