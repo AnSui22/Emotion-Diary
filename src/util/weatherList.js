@@ -12,7 +12,7 @@ export const weatherList = [
   {
     weather_id: 3,
     weather_img: process.env.PUBLIC_URL + `/assets/weather/weather3.png`,
-    weather_descript: "suncloud",
+    weather_descript: "partly sunny",
   },
   {
     weather_id: 4,
