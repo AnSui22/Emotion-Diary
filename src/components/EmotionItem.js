@@ -7,10 +7,7 @@ const EmotionItem = ({
 }) => {
   return (
     <div
-      className={[
-        "EmotionItem",
-        isSelected ? `Emotion_on` : `Emotion_off`,
-      ].join(" ")}
+      className={["Item", isSelected ? `Item_on` : `Item_off`].join(" ")}
       onClick={() => onClick(emotion_id)}
     >
       <img src={emotion_img} />

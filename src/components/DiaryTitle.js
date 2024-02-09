@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const DiaryTitle = ({ id, title, date }) => {
+const DiaryTitle = ({ id, title }) => {
   const navigate = useNavigate();
   const goDetail = () => {
     navigate(`/diary/${id}`);

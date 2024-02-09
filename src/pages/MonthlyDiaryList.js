@@ -93,7 +93,7 @@ const Home = () => {
         </div>
         <div>
           <MyButton
-            text={"Home"}
+            text={"Calender"}
             type={"positive"}
             onClick={() => navigate("/")}
           />

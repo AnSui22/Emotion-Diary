@@ -5,6 +5,7 @@ import { getStringDate } from "../util/date";
 import MyHeader from "../components/MyHeader";
 import MyButton from "../components/MyButton";
 import { emotionList } from "../util/emotionList";
+import { weatherList } from "../util/weatherList";
 
 const Diary = () => {
   const { id } = useParams();
@@ -30,6 +31,9 @@ const Diary = () => {
   } else {
     const curEmotionData = emotionList.find(
       (it) => parseInt(it.emotion_id) === parseInt(data.emotion)
+    );
+    const curWeatherData = weatherList.find(
+      (it) => parseInt(it.weather_id) === parseInt(data.weather)
     );
     return (
       <div className="DiaryPage">
@@ -61,10 +65,21 @@ const Diary = () => {
           </section>
 
           <section>
+            <h2>Weather</h2>
+            <div className="diary_img_wrapper">
+              <img src={curWeatherData.weather_img} />
+              <div className="emotion_descript">
+                {curWeatherData.weather_descript}
+              </div>
+            </div>
+          </section>
+
+          <section>
             <h2>Today's PlayList</h2>
             <div className="diary_music_wrapper">
-              <p>{data.artist}</p>
-              <p>{data.song}</p>
+              <p>
+                {data.artist} - {data.music}
+              </p>
             </div>
           </section>
 

@@ -57,7 +57,7 @@ function App() {
   }, []);
 
   // CREATE - 객체
-  const onCreate = (date, title, content, emotion, artist, music) => {
+  const onCreate = (date, title, content, emotion, weather, artist, music) => {
     dispatch({
       type: "CREATE",
       data: {
@@ -66,6 +66,7 @@ function App() {
         title,
         content,
         emotion,
+        weather,
         artist,
         music,
       },
@@ -79,7 +80,16 @@ function App() {
   };
 
   // EDIT
-  const onEdit = (targetId, date, title, content, emotion, artist, music) => {
+  const onEdit = (
+    targetId,
+    date,
+    title,
+    content,
+    emotion,
+    weather,
+    artist,
+    music
+  ) => {
     dispatch({
       type: "EDIT",
       data: {
@@ -88,6 +98,7 @@ function App() {
         title,
         content,
         emotion,
+        weather,
         artist,
         music,
       },

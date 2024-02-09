@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeadphones } from "@fortawesome/free-solid-svg-icons";
 
-const DiaryItem = ({ id, title, emotion, date, artist, music }) => {
+const DiaryItem = ({ id, title, emotion, weather, date, artist, music }) => {
   const strDate = new Date(parseInt(date)).toLocaleDateString();
   const navigate = useNavigate();
   const goDetail = () => {
@@ -13,7 +13,15 @@ const DiaryItem = ({ id, title, emotion, date, artist, music }) => {
   return (
     <div className="DiaryItem">
       <div onClick={goDetail} className="emotion_img_wrapper">
-        <img src={process.env.PUBLIC_URL + `assets/emotion${emotion}.png`} />
+        <img
+          src={process.env.PUBLIC_URL + `assets/emotions/emotion${emotion}.png`}
+        />
+      </div>
+
+      <div onClick={goDetail} className="emotion_img_wrapper">
+        <img
+          src={process.env.PUBLIC_URL + `assets/weather/weather${weather}.png`}
+        />
       </div>
 
       <div onClick={goDetail} className="info_wrapper">
