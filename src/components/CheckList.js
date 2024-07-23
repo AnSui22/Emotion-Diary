@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CheckItem from "./CheckItem";
 
-const CheckList = ({ checks }) => {
+const CheckList = ({ checks, onUpdate, onDelete }) => {
   const [search, setSearch] = useState("");
 
   const onChangeSearch = (e) => {
@@ -21,7 +21,14 @@ const CheckList = ({ checks }) => {
         placeholder="검색어를 입력하세요"
       />
       {filteredChecks.map((check) => {
-        return <CheckItem key={check.id} check={check} />;
+        return (
+          <CheckItem
+            key={check.id}
+            check={check}
+            onUpdate={onUpdate}
+            onDelete={onDelete}
+          />
+        );
       })}
     </div>
   );

@@ -1,13 +1,25 @@
-const CheckItem = ({ check }) => {
+const CheckItem = ({ check, onUpdate, onDelete }) => {
+  const onChangeCheck = () => {
+    onUpdate(check.id);
+  };
+
+  const onDeleteClick = () => {
+    onDelete(check.id);
+  };
+
   return (
     <div className="CheckItem">
       <div className="checkName">
-        <input checked={check.isdone} type="checkbox" />
+        <input
+          onChange={onChangeCheck}
+          checked={check.isdone}
+          type="checkbox"
+        />
         <div>{check.content}</div>
       </div>
       <div className="checkdate">
         <div>{check.date}</div>
-        <button>삭제</button>
+        <button onClick={onDeleteClick}>삭제</button>
       </div>
     </div>
   );
