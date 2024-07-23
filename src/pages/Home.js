@@ -146,6 +146,12 @@ const Home = () => {
         </div>
         <div>
           <MyButton
+            text={"Check List"}
+            type={"positive"}
+            onClick={() => navigate("/checklist")}
+          />
+
+          <MyButton
             text={"Diary List"}
             type={"positive"}
             onClick={() => navigate("/diarylist")}

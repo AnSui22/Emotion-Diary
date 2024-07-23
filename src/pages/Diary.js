@@ -4,7 +4,6 @@ import { DiaryStateContext } from "../App";
 import { getStringDate } from "../util/date";
 import MyHeader from "../components/MyHeader";
 import MyButton from "../components/MyButton";
-import { emotionList } from "../util/emotionList";
 import { weatherList } from "../util/weatherList";
 
 const Diary = () => {
@@ -29,9 +28,6 @@ const Diary = () => {
   if (!data) {
     return <div className="DiaryPage">loading...</div>;
   } else {
-    const curEmotionData = emotionList.find(
-      (it) => parseInt(it.emotion_id) === parseInt(data.emotion)
-    );
     const curWeatherData = weatherList.find(
       (it) => parseInt(it.weather_id) === parseInt(data.weather)
     );
@@ -51,16 +47,6 @@ const Diary = () => {
           <section>
             <div className="diary_title_wrapper">
               <p>{data.title}</p>
-            </div>
-          </section>
-
-          <section>
-            <h2>Mood</h2>
-            <div className="diary_img_wrapper">
-              <img src={curEmotionData.emotion_img} />
-              <div className="emotion_descript">
-                {curEmotionData.emotion_descript}
-              </div>
             </div>
           </section>
 

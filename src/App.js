@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useRef } from "react";
+import React, { useEffect, useReducer, useRef, useState } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
@@ -6,6 +6,7 @@ import New from "./pages/New";
 import Diary from "./pages/Diary";
 import Edit from "./pages/Edit";
 import MonthlyDiaryList from "./pages/MonthlyDiaryList";
+import CheckListPage from "./pages/CheckListPage";
 
 const reducer = (state, action) => {
   let newState = [];
@@ -57,7 +58,7 @@ function App() {
   }, []);
 
   // CREATE - 객체
-  const onCreate = (date, title, content, emotion, weather, artist, music) => {
+  const onCreate = (date, title, content, weather, artist, music) => {
     dispatch({
       type: "CREATE",
       data: {
@@ -65,7 +66,6 @@ function App() {
         date: new Date(date).getTime(),
         title,
         content,
-        emotion,
         weather,
         artist,
         music,
@@ -80,16 +80,7 @@ function App() {
   };
 
   // EDIT
-  const onEdit = (
-    targetId,
-    date,
-    title,
-    content,
-    emotion,
-    weather,
-    artist,
-    music
-  ) => {
+  const onEdit = (targetId, date, title, content, weather, artist, music) => {
     dispatch({
       type: "EDIT",
       data: {
@@ -97,7 +88,6 @@ function App() {
         date: new Date(date).getTime(),
         title,
         content,
-        emotion,
         weather,
         artist,
         music,
@@ -116,6 +106,7 @@ function App() {
               <Route path="/edit/:id" element={<Edit />} />
               <Route path="/diary/:id" element={<Diary />} />
               <Route path="/diarylist" element={<MonthlyDiaryList />} />
+              <Route path="/checklist" element={<CheckListPage />} />
             </Routes>
           </div>
         </BrowserRouter>

@@ -4,15 +4,12 @@ import { DiaryDispatchContext } from "../App.js";
 
 import MyHeader from "./MyHeader";
 import MyButton from "./MyButton";
-import EmotionItem from "./EmotionItem.js";
 import WeatherItem from "./WeatherItem.js";
 import { getStringDate } from "../util/date.js";
-import { emotionList } from "../util/emotionList.js";
 import { weatherList } from "../util/weatherList.js";
 
 const DiaryEditor = ({ isEdit, originData }) => {
   const [date, setDate] = useState(getStringDate(new Date()));
-  const [emotion, setEmotion] = useState(1);
   const [weather, setWeather] = useState(1);
 
   const titleRef = useRef();
@@ -28,9 +25,6 @@ const DiaryEditor = ({ isEdit, originData }) => {
   const [music, setMusic] = useState("");
 
   const navigate = useNavigate();
-  const handleClickEmote = (emotion) => {
-    setEmotion(emotion);
-  };
 
   const handleClickWeather = (weather) => {
     setWeather(weather);
@@ -55,18 +49,9 @@ const DiaryEditor = ({ isEdit, originData }) => {
       )
     ) {
       if (!isEdit) {
-        onCreate(date, title, content, emotion, weather, artist, music);
+        onCreate(date, title, content, weather, artist, music);
       } else {
-        onEdit(
-          originData.id,
-          date,
-          title,
-          content,
-          emotion,
-          weather,
-          artist,
-          music
-        );
+        onEdit(originData.id, date, title, content, weather, artist, music);
       }
     }
 
@@ -85,7 +70,6 @@ const DiaryEditor = ({ isEdit, originData }) => {
       setDate(getStringDate(new Date(parseInt(originData.date))));
       setTitle(originData.title);
       setContent(originData.content);
-      setEmotion(originData.emotion);
       setWeather(originData.weather);
       setArtist(originData.artist);
       setMusic(originData.music);
@@ -108,55 +92,43 @@ const DiaryEditor = ({ isEdit, originData }) => {
         }
       />
       <div>
-        <section>
-          <h2>Date</h2>
-          <div className="input_box">
-            <input
-              className="input_date"
-              type="date"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
-            />
-          </div>
-        </section>
-
-        <section>
-          <h2>Weather</h2>
-          <div className="input_box emotion_list_wrapper">
-            {weatherList.map((it) => (
-              <WeatherItem
-                key={it.weather_id}
-                {...it}
-                onClick={handleClickWeather}
-                isSelected={it.weather_id === weather}
+        <div className="DateWeatherWrapper">
+          <section>
+            <h2>Date</h2>
+            <div className="input_box">
+              <input
+                className="input_date"
+                type="date"
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
               />
-            ))}
-          </div>
-        </section>
+            </div>
+          </section>
+
+          <section className="weatherWrapper">
+            <h2>Weather</h2>
+            <div className="input_box weather_list_wrapper">
+              {weatherList.map((it) => (
+                <WeatherItem
+                  key={it.weather_id}
+                  {...it}
+                  onClick={handleClickWeather}
+                  isSelected={it.weather_id === weather}
+                />
+              ))}
+            </div>
+          </section>
+        </div>
 
         <section>
           <h2>Title</h2>
-          <div className="input_box title_wrapper">
+          <div className="input_box song_wrapper">
             <textarea
               placeholder="제목을 작성해주세요."
               ref={titleRef}
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
-          </div>
-        </section>
-
-        <section>
-          <h2>Mood</h2>
-          <div className="input_box emotion_list_wrapper">
-            {emotionList.map((it) => (
-              <EmotionItem
-                key={it.emotion_id}
-                {...it}
-                onClick={handleClickEmote}
-                isSelected={it.emotion_id === emotion}
-              />
-            ))}
           </div>
         </section>
 

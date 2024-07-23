@@ -293,43 +293,42 @@ header .head_btn_right {
   font-size: 17px;
 }
 
-.DiaryEditor .emotion_list_wrapper {
+.DiaryEditor .DateWeatherWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.DiaryEditor .weatherWrapper {
+  margin-right: 10px;
+  width: 600px;
+}
+
+.DiaryEditor .weather_list_wrapper {
   display: grid;
   grid-template-columns: repeat(7, auto);
 }
 
-.DiaryEditor .title_wrapper textarea {
-  font-family: "Middleschool_student";
-  font-size: 25px;
-  box-sizing: border-box;
-  width: 100%;
-  min-height: 20px;
-  resize: vertical;
-  border-radius: 5px;
-  padding: 15px;
-}
-
 .DiaryEditor .song_wrapper textarea {
   font-family: "Middleschool_student";
-  font-size: 25px;
+  font-size: 22px;
   box-sizing: border-box;
   width: 47%;
   min-height: 20px;
   resize: vertical;
   margin-right: 20px;
   border-radius: 5px;
-  padding: 15px;
+  padding: 5px 10px;
 }
 
 .DiaryEditor .text_wrapper textarea {
   font-family: "Middleschool_student";
-  font-size: 25px;
+  font-size: 22px;
   box-sizing: border-box;
   width: 100%;
-  min-height: 200px;
+  min-height: 150px;
   resize: vertical;
   border-radius: 5px;
-  padding: 15px;
+  padding: 5px 10px;
 }
 
 .DiaryEditor .control_box {
@@ -337,6 +336,79 @@ header .head_btn_right {
   justify-content: space-between;
   align-items: center;
   background-color: #fff6f6;
+  margin: 20px 0;
+}
+
+/* CheckListPage */
+.check_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.CheckListPage .check_wrapper button {
+  width: 10%;
+  height: 50px;
+  font-family: "Middleschool_student";
+  font-size: 22px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.CheckListPage .check_wrapper textarea {
+  font-family: "Middleschool_student";
+  font-size: 22px;
+  box-sizing: border-box;
+  width: 85%;
+  min-height: 20px;
+  resize: vertical;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+/* CheckList*/
+.CheckList textarea {
+  font-family: "Middleschool_student";
+  font-size: 22px;
+  box-sizing: border-box;
+  width: 85%;
+  min-height: 20px;
+  resize: vertical;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+/* CheckItem */
+.CheckItem {
+  font-family: "Middleschool_student";
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 20px;
+}
+
+.CheckItem .checkName {
+  display: flex;
+  align-items: flex-end;
+}
+
+.CheckItem .checkdate {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  justify-content: space-between;
+}
+
+.CheckItem button {
+  font-family: "Middleschool_student";
+  font-size: 22px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 40px;
+  width: 60px;
 }
 
 /* EmotionItem */
