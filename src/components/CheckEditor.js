@@ -23,7 +23,7 @@ const CheckEditor = ({ createCheck }) => {
   };
 
   return (
-    <div>
+    <div className="CheckEditor">
       <h2>Check List 추가</h2>
       <div className="input_box check_wrapper">
         <textarea

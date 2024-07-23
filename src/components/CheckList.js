@@ -14,7 +14,7 @@ const CheckList = ({ checks, onUpdate, onDelete }) => {
 
   return (
     <div className="CheckList">
-      <h2>Check List</h2>
+      <h2>Check List 검색</h2>
       <textarea
         value={search}
         onChange={onChangeSearch}

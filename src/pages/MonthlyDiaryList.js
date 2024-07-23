@@ -88,7 +88,7 @@ const Home = () => {
           </select>
 
           <button className="today_btn" onClick={() => setCurDate(new Date())}>
-            Today
+            TODAY
           </button>
         </div>
         <div>
@@ -99,7 +99,7 @@ const Home = () => {
           />
 
           <MyButton
-            text={"Calender"}
+            text={"Calendar"}
             type={"positive"}
             onClick={() => navigate("/")}
           />

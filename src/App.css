@@ -1,16 +1,24 @@
 /* 두꺼운 제목 */
 @font-face {
-  font-family: "TTCrownMychewR";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/TTCrownMychewR.woff2")
+  font-family: "Cafe24Meongi-W-v1.0";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Meongi-W-v1.0.woff2")
     format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HSSaemaul-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSSaemaul-Regular.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 /* 달력 날짜 */
 @font-face {
-  font-family: "SDSamliphopangche_Basic";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Basic.woff")
+  font-family: "RIDIBatang";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff")
     format("woff");
   font-weight: normal;
   font-style: normal;
@@ -30,8 +38,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  font-family: "TTCrownMychewR";
-  background-color: #fff6f6;
+  font-family: "HSSaemaul-Regular";
 }
 
 @media (min-width: 650px) {
@@ -41,8 +48,11 @@ body {
 }
 
 #root {
-  background-color: #fff6f6;
   box-shadow: rgba(100, 100, 111, 0.2), 0px 7px 29px 0px;
+}
+
+h2 {
+  color: #3e3f41;
 }
 
 .App {
@@ -50,33 +60,31 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   width: 65vw;
-  background-color: #fff6f6;
 }
 
 /* MyButton */
 .MyButton {
-  font-family: "TTCrownMychewR";
+  font-family: "HSSaemaul-Regular";
   cursor: pointer;
+  color: #3e3f41;
   border: none;
   border-radius: 10px;
   padding: 10px 20px;
-  font-size: 30px;
+  font-size: 25px;
   white-space: nowrap;
 }
 
 .MyButton_default {
-  color: #c88ea7;
-  background-color: #fff6f6;
+  background-color: #ffffff;
 }
 
 .MyButton_positive {
-  color: #99627a;
-  background-color: #fff6f6;
+  background-color: #ffffff;
 }
 
 .MyButton_negative {
   color: #d5b4b4;
-  background-color: #fff6f6;
+  background-color: #ffffff;
 }
 
 /* Header */
@@ -84,7 +92,7 @@ header {
   padding: 20px 0;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid #99627a;
+  border-bottom: 1px solid #9c9d9e;
 }
 
 header > div {
@@ -93,31 +101,31 @@ header > div {
 
 header .head_text {
   width: 50%;
-  font-family: "TTCrownMychewR";
-  font-size: 40px;
-  color: #99627a;
+  font-family: "Cafe24Meongi-W-v1.0";
+  font-size: 55px;
   justify-content: center;
 }
 
 header .head_btn_left {
   width: 25%;
   justify-content: start;
-  color: #c88ea7;
 }
 
 header .head_btn_right {
   width: 25%;
   justify-content: end;
-  color: #c88ea7;
 }
 
 /* Calender */
 /* Add this CSS to your existing stylesheet or create a new one */
 
 .calender {
-  margin-top: 20px;
+  margin-top: 2px;
   font-size: 17px;
-  font-family: "SDSamliphopangche_Basic";
+  font-family: "RIDIBatang";
+  color: #707276;
+  border-top: 1px solid #9c9d9e;
+  padding-top: 15px;
 }
 
 .week_row {
@@ -125,11 +133,11 @@ header .head_btn_right {
 }
 
 .week_row div:first-child {
-  color: #dc8686;
+  color: #d36a6a;
 }
 
 .week_row div:last-child {
-  color: #637a9f;
+  color: #587db8;
 }
 
 .day_row {
@@ -159,7 +167,7 @@ header .head_btn_right {
 }
 
 .valid {
-  background-color: #fff6f6;
+  background-color: #ffffff;
 }
 
 .disabled {
@@ -167,41 +175,44 @@ header .head_btn_right {
 }
 
 .today {
-  color: #c88ea7;
+  color: #587db8;
 }
 
 .today_btn {
   border: none;
-  background-color: #fff6f6;
-  font-family: "TTCrownMychewR";
-  font-size: 30px;
-  color: #99627a;
+  background-color: #ffffff;
+  color: #3e3f41;
+  font-family: "HSSaemaul-Regular";
+  font-size: 25px;
   cursor: pointer;
+  padding: 10px 20px;
   margin: 0 10px;
 }
 
 /* DiaryList */
 .DiaryList .menu {
-  margin: 20px 0 30px 0;
+  margin: 2px 0 30px 0;
   display: flex;
   justify-content: space-between;
+  border-top: 1px solid #9c9d9e;
 }
 
 .DiaryList .menu .ControlMenu {
   border: none;
+  color: #3e3f41;
   border-radius: 5px;
   padding: 5px 10px;
+  margin-top: 10px;
   cursor: pointer;
-  font-family: "TTCrownMychewR";
-  color: #c88ea7;
-  background-color: #fff6f6;
+  font-family: "HSSaemaul-Regular";
+  background-color: #ffffff;
   font-size: 25px;
 }
 
 /* DiaryItem */
 .DiaryItem {
   padding: 15px 0;
-  border-bottom: 1px solid #c88ea7;
+  border-bottom: 1px solid #9c9d9e;
   display: flex;
   justify-content: space-between;
 }
@@ -228,10 +239,10 @@ header .head_btn_right {
 }
 
 .DiaryItem .diary_date {
-  font-family: "TTCrownMychewR";
-  color: #c88ea7;
+  font-family: "HSSaemaul-Regular";
   font-size: 25px;
   margin: 10px 0;
+  color: #3e3f41;
 }
 
 .DiaryItem .diary_content {
@@ -267,10 +278,10 @@ header .head_btn_right {
   border-radius: 5px;
   padding: 0 10px;
   cursor: pointer;
-  font-family: "TTCrownMychewR";
-  font-size: 30px;
-  color: #c88ea7;
-  background-color: #fff6f6;
+  font-family: "HSSaemaul-Regular";
+  font-size: 22px;
+  background-color: #ffffff;
+  color: #3e3f41;
 }
 
 /* DiaryEditor */
@@ -278,18 +289,17 @@ header .head_btn_right {
 }
 
 .DiaryEditor h2 {
-  color: #c88ea7;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: normal;
 }
 
 .DiaryEditor .input_date {
   border: none;
   border-radius: 5px;
-  background-color: #fff6f6;
+  background-color: #ffffff;
   padding: 0 15px;
   cursor: pointer;
-  font-family: "SDSamliphopangche_Basic";
+  font-family: "HSSaemaul-Regular";
   font-size: 17px;
 }
 
@@ -335,11 +345,15 @@ header .head_btn_right {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff6f6;
+  background-color: #ffffff;
   margin: 20px 0;
 }
 
 /* CheckListPage */
+.CheckEditor {
+  margin: 30px 0 40px 0;
+}
+
 .check_wrapper {
   display: flex;
   justify-content: space-between;
@@ -349,8 +363,8 @@ header .head_btn_right {
 .CheckListPage .check_wrapper button {
   width: 10%;
   height: 50px;
-  font-family: "Middleschool_student";
-  font-size: 22px;
+  font-family: "HSSaemaul-Regular";
+  font-size: 20px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -402,8 +416,8 @@ header .head_btn_right {
 }
 
 .CheckItem button {
-  font-family: "Middleschool_student";
-  font-size: 22px;
+  font-family: "HSSaemaul-Regular";
+  font-size: 18px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -432,8 +446,7 @@ header .head_btn_right {
 }
 
 .Item_on span {
-  border-bottom: 3px solid #99627a;
-  color: #99627a;
+  border-bottom: 3px solid black;
   transition: 0.1s ease-in-out;
 }
 
@@ -443,7 +456,6 @@ header .head_btn_right {
 }
 
 .DiaryPage h2 {
-  color: #99627a;
   font-size: 23px;
   font-weight: normal;
 }

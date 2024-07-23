@@ -12,7 +12,7 @@ import DiaryTitle from "../components/DiaryTitle";
 
 const RenderWeeks = () => (
   <div className="week_row">
-    {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((week, idx) => (
+    {["sun", "mon", "tue", "wed", "thu", "fri", "sat"].map((week, idx) => (
       <div className="col" key={idx}>
         {week}
       </div>
@@ -141,10 +141,10 @@ const Home = () => {
           </select>
 
           <button className="today_btn" onClick={() => setCurDate(new Date())}>
-            Today
+            TODAY
           </button>
         </div>
-        <div>
+        <div className="HandleDate">
           <MyButton
             text={"Check List"}
             type={"positive"}
