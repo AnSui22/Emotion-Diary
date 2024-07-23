@@ -6,7 +6,6 @@ const CheckList = ({ checks }) => {
 
   const onChangeSearch = (e) => {
     setSearch(e.target.value);
-    s;
   };
 
   const filteredChecks = checks.filter((check) =>
