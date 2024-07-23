@@ -455,6 +455,37 @@ header .head_btn_right {
 .DiaryPage {
 }
 
+.diary_wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.diary_wrapper .img_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.date_wrappper {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.date_wrappper2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.song_wrappper {
+  display: flex;
+  align-items: baseline;
+  width: 95%;
+  margin: 0 auto;
+}
+
 .DiaryPage h2 {
   font-size: 23px;
   font-weight: normal;
@@ -466,12 +497,32 @@ header .head_btn_right {
   color: black;
 }
 
-.DiaryPage .diary_title_wrapper p {
+.DiaryPage .img_wrapper p {
   font-family: "Middleschool_student";
-  font-size: 25px;
+  font-size: 40px;
   color: black;
+  margin: 7px 0;
 }
 
-.DiaryPage .diary_img_wrapper img {
-  width: 40px;
+.diary_img_wrapper img {
+  width: 50px;
+  height: 50px;
+}
+
+.img_wrapper img {
+  width: 80px;
+  height: 75px;
+  margin-right: 15px;
+}
+
+.DiaryPage .emotion_descript {
+  font-family: "Middleschool_student";
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+.DiaryPage .diary_content_wrapper {
+  display: flex;
+  width: 95%;
+  margin: 0 auto;
 }
