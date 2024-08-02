@@ -2,6 +2,8 @@
 
 
 > 일상의 작은 행복들을 기록하는 일기장, **Happy Scribbles**✏
+> 
+> https://happy-scribbles.vercel.app/
 
 기록하기 쉽고 직관적인 인터페이스를 통해 매일의 기쁨과 중요한 순간들을 손쉽게 기록하고 관리할 수 있습니다.
 
@@ -124,6 +126,15 @@
   : Cancel 버튼을 클릭하면 일기 수정이 취소되고 이전 페이지로 이동합니다.
 
   : Complete 버튼을 클릭하면 일기 수정이 완료되고 Calendar 페이지로 이동합니다.
+
+<br>
+
+## 배포
+
+![123](https://github.com/user-attachments/assets/68efad49-6c60-40f3-b3bc-08c5b8aa2dc5)
+
+- Vercel을 통해 배포하였습니다.
+- https://happy-scribbles.vercel.app/
 
 <br>
 
