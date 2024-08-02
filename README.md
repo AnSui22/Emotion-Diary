@@ -7,7 +7,7 @@
 
 ## 페이지 별 주요 기능 소개
 1. Calendar 페이지
-Happy Scribblesdml 기본 페이지입니다.
+Happy Scribbles의 기본 페이지입니다.
 
 - 날짜 이동
 
@@ -33,6 +33,29 @@ Happy Scribblesdml 기본 페이지입니다.
 
   
   : 작성한 일기는 달력에 제목이 표시되고 제목을 클릭하면 해당 일기의 상세보기 페이지로 이동할 수 있습니다.
+
+
+2. Check List 페이지
+
+- Check List
+
+  
+  : 추가할 Check List를 입력하고 enter를 누르거나 추가버튼을 클릭하면 Check List를 추가할 수 있습니다.
+
+  : 추가된 Check List는 검색창 아래에 추가한 순서대로 날짜, 삭제버튼과 함께 보여집니다.
+
+  : 삭제 버튼을 누르면 해당 Check List를 삭제할 수 있습니다.
+
+  : 체크 박스를 선택하면 완료 표시가 나타납니다.
+
+
+- Check List 검색
+  
+
+  : 검색창에 Check List를 검색하면 리스트에 해당 Check List만 나타납니다.
+  : 대소문자 구별없이 검색 가능합니다.
+
+
   
 
 
