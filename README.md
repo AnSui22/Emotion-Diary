@@ -11,6 +11,8 @@
 ## 페이지 별 주요 기능
 #### 1. Calendar 페이지 (기본 페이지)
 
+![1](https://github.com/user-attachments/assets/4b8166d8-a93d-4b46-a3ec-0bfa56cad5a6)
+
 - 날짜 이동
 
   
@@ -41,6 +43,7 @@
 <br>
 
 #### 2. Check List 페이지
+![스크린샷 2024-08-02 170549](https://github.com/user-attachments/assets/dc42085d-5fc0-4ed9-9473-6b4b9a5c108a)
 
 - Check List
 
@@ -55,6 +58,8 @@
 
 <br>
 
+![스크린샷 2024-08-02 170558](https://github.com/user-attachments/assets/e65110d9-c434-4a84-846b-c04e8b633580)
+
 - Check List 검색
   
 
@@ -65,6 +70,7 @@
 <br>
 
 #### 3. Diary List 페이지
+![스크린샷 2024-08-02 170610](https://github.com/user-attachments/assets/37b29c4c-97e2-4292-8a9a-d3c66dcd6ee8)
 
 - Diary List
 
@@ -80,6 +86,9 @@
 <br>
 
 #### 4. 일기 작성 페이지
+![22](https://github.com/user-attachments/assets/9c803e4f-573d-44b3-9887-80d081a57427)
+
+![스크린샷 2024-08-02 165729](https://github.com/user-attachments/assets/dae4efb3-26c2-423b-98da-1b09b40ff1e2)
 
 - 일기 작성
 
@@ -93,6 +102,7 @@
 <br>
 
 #### 5. 일기 상세 페이지
+![스크린샷 2024-08-02 165957](https://github.com/user-attachments/assets/1a4fa111-3162-4945-a6fe-fd918c3051b0)
 
 - 일기 상세 보기
 
@@ -104,6 +114,8 @@
 <br>
 
 #### 6. 일기 수정 페이지
+![스크린샷 2024-08-02 170009](https://github.com/user-attachments/assets/ca4125bf-ae36-4fae-b627-ea26096b6c0e)
+![스크린샷 2024-08-02 170013](https://github.com/user-attachments/assets/985efff5-29ba-45bf-b2fb-a9b403e8616e)
 
 - 일기 수정
   
